@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { MdKeyboardArrowDown } from "react-icons/md";
+
 import { images } from "../constants";
 
 const navItemsInfo = [
@@ -39,7 +40,7 @@ const NavItem = ({ item }) => {
           >
             <span>{item.name}</span>
             <MdKeyboardArrowDown />
-             </button>
+          </button>
           <div
             className={`${
               dropdown ? "block" : "hidden"
@@ -48,7 +49,7 @@ const NavItem = ({ item }) => {
             <ul className="bg-dark-soft lg:bg-transparent text-center flex flex-col shadow-lg rounded-lg overflow-hidden">
               {item.items.map((page, index) => (
                 <a
-                 key={index}
+                  key={index}
                   href="/"
                   className="hover:bg-dark-hard hover:text-white px-4 py-2 text-white lg:text-dark-soft"
                 >
@@ -76,7 +77,7 @@ const Header = () => {
     <section className="sticky top-0 left-0 right-0 z-50 bg-white">
       <header className="container mx-auto px-5 flex justify-between py-4 items-center">
         <div>
-        <img className="w-16" src={images.Logo} alt="logo" />
+          <img className="w-16" src={images.Logo} alt="logo" />
         </div>
         <div className="lg:hidden z-50">
           {navIsVisible ? (
